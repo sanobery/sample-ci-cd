@@ -1,4 +1,4 @@
-name: "Hello World"
+name: "Multi Pipeline"
 
 #Trigger action when a push is done to master / production branch
 on:
@@ -12,12 +12,14 @@ on:
 
 jobs:
   on-push:
+    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
       - name: "Print Hello World"
         run: echo "Hello World"
 
   on-pull-reqest:
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - name: "Print pull request"
