@@ -2,14 +2,14 @@ name: "Hello World"
 
 #Trigger action when a push is done to master / production branch
 on:
-    push:
-        branches:
-            - master
-            - production
+  push:
+    branches:
+      - master
+      - production
 
 jobs:
-    hellow_world:
-        runs-on: ubuntu-latest
-        steps:
-            -name: "Print Hello World"
-            run: echo "Hello World"
+  hellow_world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Print Hello World"
+        run: echo "Hello World"
